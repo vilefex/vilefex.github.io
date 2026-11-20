@@ -134,7 +134,6 @@ function render(){
  items.forEach(function(a){if(a.cat)cats[a.cat]=1});var names=Object.keys(cats).sort();
  chipRow($("chips"),names,cat,function(v){cat=v;render()},"Все");
  chipRow($("sts"),["stable","beta","alpha"],stf,function(v){stf=v;render()},"Любой статус");
- var dlist=$("cats");dlist.textContent="";names.forEach(function(n){var o=el("option");o.value=n;dlist.appendChild(o)});
  var list=items.filter(function(a){
   if(cat&&a.cat!==cat)return false;if(stf&&a.status!==stf)return false;
   if(q){var h=(a.name+" "+(a.desc||"")+" "+(a.tags||[]).join(" ")+" "+(a.cat||"")+" "+installsOf(a).map(function(i){return i.cmd}).join(" ")).toLowerCase();if(h.indexOf(q)<0)return false}

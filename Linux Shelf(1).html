@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Linux Shelf</title>
+<style>
+:root{--bg:#0f0c18;--bar:#0a0810;--card:#171326;--card2:#1d1830;--ink:#ece8f7;--mut:#9a92b3;--line:#2a2340;--acc:#8b5cf6;--acc2:#c084fc;--chip:#221c38;--code:#08060e;--codeink:#d8c8ff;color-scheme:dark;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f1fb;--bar:#fff;--card:#fff;--card2:#f8f5fe;--ink:#17121f;--mut:#6b6280;--line:#e2dcf0;--chip:#eee9fa;--code:#120d1c;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f4f1fb;--bar:#fff;--card:#fff;--card2:#f8f5fe;--ink:#17121f;--mut:#6b6280;--line:#e2dcf0;--chip:#eee9fa;--code:#120d1c;color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 18px 70px}
+nav{background:var(--bar);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bar);z-index:30}
+nav .wrap{display:flex;align-items:center;gap:14px;padding:12px 18px;flex-wrap:wrap}
+.logo{font-weight:900;font-size:22px;letter-spacing:.04em;text-transform:uppercase;margin-right:auto}
+.logo b{color:var(--acc)}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:9px 14px;cursor:pointer;font:inherit;color:inherit;font-weight:600;transition:.15s}
+.btn:hover{border-color:var(--acc);color:var(--acc)}
+.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+.pri:hover{background:#a07bf8;color:#fff}[hidden]{display:none!important}
+.hero{padding:34px 0 8px}
+.hero h1{margin:0 0 4px;font-size:clamp(24px,4.5vw,36px);text-transform:uppercase;letter-spacing:.02em}
+.hero p{margin:0 0 16px;color:var(--mut)}
+.search{display:flex;gap:0;max-width:760px}
+.in{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:11px 14px;outline:none;font:inherit;color:inherit;min-width:0}
+.in:focus{border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 25%,transparent)}
+#q{flex:1;border-radius:8px 0 0 8px;font-size:16px}
+#srt{border-radius:0 8px 8px 0;border-left:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px}
+.chip{background:var(--chip);border:1px solid transparent;border-radius:6px;padding:6px 13px;cursor:pointer;font:inherit;font-size:13px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.03em}
+.chip:hover{color:var(--ink)}
+.chip.on{background:var(--acc);color:#fff}
+.sec{display:flex;align-items:center;gap:10px;margin:26px 0 14px;font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.sec::before{content:"";width:5px;height:22px;background:var(--acc);border-radius:2px}
+.sec small{color:var(--mut);font-weight:600;font-size:13px;margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:.18s}
+.card:hover{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc),0 14px 34px -18px var(--acc);transform:translateY(-2px)}
+.cover{aspect-ratio:1/1;overflow:hidden;position:relative;display:grid;place-items:center;font-size:84px;font-weight:900;color:rgba(255,255,255,.92);text-shadow:0 4px 18px rgba(0,0,0,.35)}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.cover .bd,.cover .st{z-index:1}.cover .bd{position:absolute;top:10px;left:10px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:5px;background:rgba(0,0,0,.45);color:#fff;text-shadow:none}
+.cover .st{position:absolute;top:10px;right:10px;font-size:11px;font-weight:800;text-transform:uppercase;padding:3px 8px;border-radius:5px;text-shadow:none}
+.st.stable{background:#12b76a;color:#fff}.st.beta{background:#f79009;color:#fff}.st.alpha{background:#f04438;color:#fff}
+.body{padding:14px;display:flex;flex-direction:column;gap:10px;flex:1}
+.nm{margin:0;font-size:18px;font-weight:800;overflow-wrap:anywhere}
+.desc{margin:0;color:var(--mut);font-size:14px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;background:var(--chip);border-radius:5px;padding:2px 8px;color:var(--mut)}
+.lbl{font-size:11px;font-weight:800;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin:2px 0 -4px}
+.tabs{display:flex;gap:4px;flex-wrap:wrap}
+.tab{font:inherit;font-size:12px;font-weight:700;border:0;background:var(--chip);color:var(--mut);padding:4px 9px;border-radius:5px;cursor:pointer}
+.tab.on{background:var(--acc);color:#fff}
+pre{margin:0;background:var(--code);color:var(--codeink);border-radius:7px;padding:9px 11px;font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;overflow-x:auto;cursor:pointer;white-space:pre;border:1px solid var(--line)}
+.files{display:flex;flex-direction:column;gap:6px}
+.file{display:flex;align-items:center;gap:8px;background:var(--card2);border:1px solid var(--line);border-radius:7px;padding:6px 8px;text-decoration:none;color:var(--ink);font-size:13px}
+.file:hover{border-color:var(--acc)}
+.file .k{flex:none;font-size:10.5px;font-weight:800;text-transform:uppercase;background:var(--acc);color:#fff;border-radius:4px;padding:2px 6px}
+.file .n{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file .s{color:var(--mut);font-size:12px;flex:none}
+.dl{flex:none;font-weight:800;color:var(--acc);font-size:12px;text-transform:uppercase}
+.acts{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding:10px 14px;background:var(--card2)}
+.acts a,.acts button{font:inherit;font-size:13px;font-weight:600;padding:5px 11px;border-radius:6px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;text-decoration:none}
+.acts a:hover,.acts button:hover{border-color:var(--acc);color:var(--acc)}
+.acts .del:hover{border-color:#f04438;color:#f04438}
+.empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:50px 10px;border:1px dashed var(--line);border-radius:10px}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);width:min(640px,95vw);max-height:92vh;padding:22px}
+dialog::backdrop{background:rgba(2,4,8,.7)}
+dialog h2{margin:0 0 12px;text-transform:uppercase}
+label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);margin:12px 0 4px}
+dialog .in{width:100%}textarea{resize:vertical;min-height:76px}
+.row{display:flex;gap:10px}.row>*{flex:1;min-width:0}
+.lr{display:flex;gap:6px;margin-bottom:6px}.lr .in{padding:8px 10px}.lr .x{flex:none;width:38px;padding:0}
+.foot{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.imgrow{display:flex;gap:14px;align-items:center}.prev{width:96px;height:96px;border-radius:12px;background:var(--chip) center/cover;display:grid;place-items:center;color:var(--mut);font-size:30px;font-weight:900;overflow:hidden;flex:none}
+#toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--acc);color:#fff;font-weight:700;padding:9px 18px;border-radius:8px;opacity:0;transition:.25s;pointer-events:none;z-index:50}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.note{font-size:13px;color:var(--mut);margin-top:24px}
+.hint{font-size:12px;color:var(--mut);margin:4px 0 0;text-transform:none;font-weight:400;letter-spacing:0}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+ <div class="logo">Linux <b>Shelf</b></div>
+ <button class="btn" id="theme" title="Сменить тему">◐</button>
+ <button class="btn" id="exp" hidden>Экспорт JSON</button>
+ <button class="btn pri" id="add" hidden>＋ Добавить</button>
+</div></nav>
+<div class="wrap">
+ <div class="hero">
+  <h1>Библиотека приложений для Linux</h1>
+  <p><span id="cnt">…</span> · команды установки для разных дистрибутивов и ссылки на пакеты</p>
+  <div class="search">
+   <input class="in" id="q" type="search" placeholder="Поиск приложений…">
+   <select class="in" id="srt"><option value="new">Новые</option><option value="az">А → Я</option></select>
+  </div>
+  <div class="filters" id="chips"></div>
+  <div class="filters" id="sts"></div>
+ </div>
+ <div class="sec">Приложения <small id="shown"></small></div>
+ <div class="grid" id="grid"><div class="empty">Загрузка…</div></div>
+ <p class="note" id="note"></p>
+</div>
+
+<dialog id="dlg">
+ <h2 id="dt">Новое приложение</h2>
+ <label>Название *</label><input class="in" id="f_name" maxlength="60">
+ <label id="l_img">Картинка (квадратная)</label>
+ <div class="imgrow" id="imgrow"><div class="prev" id="prev">?</div><div><input type="file" id="f_img" accept="image/png,image/jpeg,image/webp,image/gif" hidden><button class="btn" id="pick" type="button">Выбрать картинку</button> <button class="btn" id="noimg" type="button">Убрать</button><p class="hint">Обрежется по центру до квадрата, максимум 512×512.</p></div></div>
+ <div class="row">
+  <div><label>Категория</label><input class="in" id="f_cat" list="cats" maxlength="30" placeholder="Редакторы, Игры…"><datalist id="cats"></datalist></div>
+  <div><label>Статус</label><select class="in" id="f_st"><option value="stable">Стабильное</option><option value="beta">Бета</option><option value="alpha">Альфа</option></select></div>
+ </div>
+ <label>Описание</label><textarea class="in" id="f_desc" maxlength="400"></textarea>
+ <label>Сайт или GitHub</label><input class="in" id="f_url" type="url" placeholder="https://…">
+ <label>Команды установки</label><div id="f_ins"></div>
+ <button class="btn" id="addIns" type="button">＋ Команда</button>
+ <label>Файлы пакетов (ссылки)</label><div id="f_files"></div>
+ <button class="btn" id="addFile" type="button">＋ Файл</button>
+ <p class="hint">AppImage, .deb, .rpm, .pkg.tar.zst, .tar.gz, .exe и др. Вставьте прямую ссылку (например, из GitHub Releases) — тип определится по имени файла.</p>
+ <label>Теги через запятую</label><input class="in" id="f_tags" maxlength="80" placeholder="видео, tui, лёгкое">
+ <div class="foot"><button class="btn" id="cancel" type="button">Отмена</button><button class="btn pri" id="save" type="button">Сохранить</button></div>
+</dialog>
+<div id="toast"></div>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var items=[],cat="",stf="",col=null,db=null,canEdit=false,editId=null,dl=$("dlg"),assets=null,newBlob=null,imgId=null,oldImg=null;
+var COV=[["#8b5cf6","#3b1a8f"],["#c084fc","#5b1f8f"],["#6366f1","#26237a"],["#d946ef","#6a1a7a"],["#a855f7","#4a1a8a"],["#7c3aed","#2e1065"],["#ec4899","#6b1a45"]];
+var ST={stable:"Стабильное",beta:"Бета",alpha:"Альфа"};
+var DISTROS=["Arch","Debian / Ubuntu","Fedora","openSUSE","Nix","Flatpak","Snap","Windows / Wine","Любой дистрибутив","Другое"];
+var KINDS=[[/\.appimage$/i,"AppImage"],[/\.pkg\.tar\.(zst|xz|gz)$/i,"pkg.tar"],[/\.deb$/i,"deb"],[/\.rpm$/i,"rpm"],[/\.flatpak$/i,"flatpak"],[/\.snap$/i,"snap"],[/\.(tar\.gz|tgz)$/i,"tar.gz"],[/\.(tar\.xz|txz)$/i,"tar.xz"],[/\.tar\.zst$/i,"tar.zst"],[/\.zip$/i,"zip"],[/\.(sh|run)$/i,"installer"],[/\.exe$/i,"exe"],[/\.msi$/i,"msi"]];
+
+function toast(t){var e=$("toast");e.textContent=t;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(function(){e.classList.remove("on")},1800)}
+function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+function cov(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return COV[h%COV.length]}
+function safeUrl(u){return /^https?:\/\//i.test(u||"")?u:""}
+function fname(u){try{return decodeURIComponent(new URL(u).pathname.split("/").pop())||u}catch(e){return u}}
+function kind(n){for(var i=0;i<KINDS.length;i++)if(KINDS[i][0].test(n))return KINDS[i][1];return"файл"}
+function plural(n){var m=n%10,c=n%100;return(m===1&&c!==11)?"приложение":(m>=2&&m<=4&&(c<12||c>14))?"приложения":"приложений"}
+function installsOf(a){if(a.installs&&a.installs.length)return a.installs;return a.install?[{distro:"Любой дистрибутив",cmd:a.install}]:[]}
+
+(function(){var r=document.documentElement,b=$("theme");
+function cur(){return r.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme:light)").matches?"light":"dark")}
+function paint(){b.textContent=cur()==="dark"?"☀ Светлая":"🌙 Тёмная"}
+try{var s=localStorage.getItem("shelf-theme");if(s==="dark"||s==="light")r.setAttribute("data-theme",s)}catch(e){}
+b.onclick=function(){var n=cur()==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("shelf-theme",n)}catch(e){}paint()};
+paint()})();
+
+function chipRow(host,vals,cur,fn,all){host.textContent="";[""].concat(vals).forEach(function(v){var b=el("button","chip"+(v===cur?" on":""),v===""?all:(ST[v]||v));b.onclick=function(){fn(v)};host.appendChild(b)})}
+
+function render(){
+ var q=$("q").value.trim().toLowerCase(),so=$("srt").value,cats={};
+ items.forEach(function(a){if(a.cat)cats[a.cat]=1});var names=Object.keys(cats).sort();
+ chipRow($("chips"),names,cat,function(v){cat=v;render()},"Все");
+ chipRow($("sts"),["stable","beta","alpha"],stf,function(v){stf=v;render()},"Любой статус");
+ var dlist=$("cats");dlist.textContent="";names.forEach(function(n){var o=el("option");o.value=n;dlist.appendChild(o)});
+ var list=items.filter(function(a){
+  if(cat&&a.cat!==cat)return false;if(stf&&a.status!==stf)return false;
+  if(q){var h=(a.name+" "+(a.desc||"")+" "+(a.tags||[]).join(" ")+" "+(a.cat||"")+" "+installsOf(a).map(function(i){return i.cmd}).join(" ")).toLowerCase();if(h.indexOf(q)<0)return false}
+  return true});
+ list.sort(function(a,b){return so==="az"?a.name.localeCompare(b.name,"ru"):(b.added||0)-(a.added||0)});
+ $("cnt").textContent=items.length+" "+plural(items.length);$("shown").textContent=list.length===items.length?"":"найдено: "+list.length;
+ var g=$("grid");g.textContent="";
+ if(!list.length){g.appendChild(el("div","empty",items.length?"Ничего не найдено":(canEdit?"Полка пуста. Нажмите «Добавить», чтобы создать первую карточку.":"Пока здесь пусто.")));return}
+ list.forEach(function(a){g.appendChild(card(a))})}
+
+function card(a){
+ var c=el("article","card"),cv=el("div","cover",(a.name||"?").charAt(0).toUpperCase()),k=cov(a.name||"");
+ cv.style.background="linear-gradient(135deg,"+k[0]+","+k[1]+")";
+ if(a.img){var im=new Image();im.src="/_blob/"+a.img;im.alt=a.name||"";im.loading="lazy";im.onerror=function(){im.remove()};cv.appendChild(im)}
+ cv.appendChild(el("span","bd",a.cat||"Без категории"));cv.appendChild(el("span","st "+(a.status||"stable"),ST[a.status]||ST.stable));c.appendChild(cv);
+ var b=el("div","body");b.appendChild(el("h3","nm",a.name));
+ if(a.desc)b.appendChild(el("p","desc",a.desc));
+ if(a.tags&&a.tags.length){var tg=el("div","tags");a.tags.forEach(function(x){tg.appendChild(el("span","tag",x))});b.appendChild(tg)}
+ var ins=installsOf(a);
+ if(ins.length){b.appendChild(el("div","lbl","Установка"));var tabs=el("div","tabs"),pre=el("pre");pre.title="Нажмите, чтобы скопировать";
+  var sel=0;function show(){pre.textContent=ins[sel].cmd;Array.prototype.forEach.call(tabs.children,function(t,i){t.className="tab"+(i===sel?" on":"")})}
+  ins.forEach(function(x,i){var t=el("button","tab",x.distro);t.onclick=function(){sel=i;show()};tabs.appendChild(t)});
+  pre.onclick=function(){var s=ins[sel].cmd;if(navigator.clipboard)navigator.clipboard.writeText(s).then(function(){toast("Команда скопирована")},function(){toast("Не удалось скопировать")})};
+  show();b.appendChild(tabs);b.appendChild(pre)}
+ if(a.files&&a.files.length){b.appendChild(el("div","lbl","Файлы"));var fl=el("div","files");
+  a.files.forEach(function(f){var u=safeUrl(f.url);if(!u)return;var n=f.name||fname(u),l=el("a","file");l.href=u;l.target="_blank";l.rel="noopener noreferrer";
+   l.appendChild(el("span","k",kind(n)));l.appendChild(el("span","n",n));if(f.size)l.appendChild(el("span","s",f.size));l.appendChild(el("span","dl","Скачать"));fl.appendChild(l)});b.appendChild(fl)}
+ c.appendChild(b);
+ var ac=el("div","acts"),u=safeUrl(a.url);
+ if(u){var l=el("a",null,"Сайт ↗");l.href=u;l.target="_blank";l.rel="noopener noreferrer";ac.appendChild(l)}
+ if(canEdit){var e=el("button",null,"Изменить");e.onclick=function(){openForm(a)};ac.appendChild(e);
+  var d=el("button","del","Удалить");d.onclick=function(){if(confirm("Удалить «"+a.name+"»?"))col.doc(a.id).delete().then(function(){if(a.img&&assets)assets.delete(a.img).catch(function(){});toast("Удалено")},function(){toast("Нет прав на удаление")})};ac.appendChild(d)}
+ if(ac.children.length)c.appendChild(ac);
+ return c}
+
+/* form rows */
+function insRow(v){var r=el("div","lr"),s=el("select","in");DISTROS.forEach(function(d){var o=el("option",null,d);o.value=d;s.appendChild(o)});s.value=v&&v.distro||"Arch";s.style.flex="0 0 150px";
+ var i=el("input","in");i.placeholder="sudo pacman -S app";i.maxLength=200;i.value=v&&v.cmd||"";i.style.flex="1";
+ var x=el("button","btn x","✕");x.type="button";x.onclick=function(){r.remove()};r.appendChild(s);r.appendChild(i);r.appendChild(x);$("f_ins").appendChild(r)}
+function fileRow(v){var r=el("div","lr"),u=el("input","in");u.placeholder="https://github.com/…/app-x86_64.AppImage";u.type="url";u.style.flex="1";u.value=v&&v.url||"";
+ var n=el("input","in");n.placeholder="имя (необяз.)";n.maxLength=80;n.style.flex="0 0 130px";n.value=v&&v.name||"";
+ var s=el("input","in");s.placeholder="размер";s.maxLength=12;s.style.flex="0 0 80px";s.value=v&&v.size||"";
+ var x=el("button","btn x","✕");x.type="button";x.onclick=function(){r.remove()};r.appendChild(u);r.appendChild(n);r.appendChild(s);r.appendChild(x);$("f_files").appendChild(r)}
+$("addIns").onclick=function(){insRow()};$("addFile").onclick=function(){fileRow()};
+
+function openForm(a){
+ editId=a?a.id:null;$("dt").textContent=a?"Редактировать":"Новое приложение";
+ newBlob=null;imgId=a&&a.img||null;oldImg=imgId;prevSet(imgId?"/_blob/"+imgId:"");
+ $("f_name").value=a?a.name:"";$("f_cat").value=a?a.cat||"":cat;$("f_st").value=a?a.status||"stable":"stable";
+ $("f_desc").value=a?a.desc||"":"";$("f_url").value=a?a.url||"":"";$("f_tags").value=a&&a.tags?a.tags.join(", "):"";
+ $("f_ins").textContent="";$("f_files").textContent="";
+ var ins=a?installsOf(a):[];if(ins.length)ins.forEach(insRow);else insRow();
+ if(a&&a.files)a.files.forEach(fileRow);
+ dl.showModal();$("f_name").focus()}
+
+function saveForm(){
+ var name=$("f_name").value.trim();if(!name){toast("Укажите название");return}
+ var url=$("f_url").value.trim();if(url&&!safeUrl(url)){toast("Сайт: нужна ссылка http(s)://");return}
+ var installs=[],files=[],bad=false;
+ Array.prototype.forEach.call($("f_ins").children,function(r){var d=r.children[0].value,c=r.children[1].value.trim();if(c)installs.push({distro:d,cmd:c})});
+ Array.prototype.forEach.call($("f_files").children,function(r){var u=r.children[0].value.trim();if(!u)return;if(!safeUrl(u)){bad=true;return}
+  var f={url:u},n=r.children[1].value.trim(),s=r.children[2].value.trim();if(n)f.name=n;if(s)f.size=s;files.push(f)});
+ if(bad){toast("Ссылки на файлы должны начинаться с http(s)://");return}
+ var data={name:name,cat:$("f_cat").value.trim(),status:$("f_st").value,desc:$("f_desc").value.trim(),url:url,installs:installs,files:files,install:"",
+  tags:$("f_tags").value.split(",").map(function(x){return x.trim()}).filter(Boolean).slice(0,8)};
+ var ref=editId?col.doc(editId):col.doc();if(!editId)data.added=Date.now();
+ $("save").disabled=true;
+ (async function(){
+  try{
+   if(newBlob){if(!assets){toast("Загрузка картинок недоступна");return}var up=await assets.upload(newBlob);imgId=up.id}
+   data.img=imgId||"";
+   await (editId?ref.update(data):ref.set(data));
+   if(oldImg&&oldImg!==imgId&&assets){try{await assets.delete(oldImg)}catch(e){}}
+   dl.close();toast("Сохранено")
+  }catch(e){toast(e&&e.code==="too_large"?"Картинка слишком большая":"Не удалось сохранить — нужны права редактора")}
+  finally{$("save").disabled=false}
+ })()}
+
+function prevSet(src){var p=$("prev");p.style.backgroundImage=src?"url('"+src+"')":"";p.textContent=src?"":"?"}
+$("pick").onclick=function(){$("f_img").click()};
+$("f_img").onchange=function(){var f=this.files&&this.files[0];this.value="";if(!f)return;
+ var u=URL.createObjectURL(f),im=new Image();
+ im.onload=function(){var s=Math.min(im.naturalWidth,im.naturalHeight);if(!s){URL.revokeObjectURL(u);toast("Не удалось прочитать картинку");return}
+  var S=Math.min(512,s),cv=document.createElement("canvas");cv.width=cv.height=S;
+  cv.getContext("2d").drawImage(im,(im.naturalWidth-s)/2,(im.naturalHeight-s)/2,s,s,0,0,S,S);URL.revokeObjectURL(u);
+  cv.toBlob(function(b){if(!b){toast("Не удалось обработать картинку");return}newBlob=b;prevSet(URL.createObjectURL(b))},"image/webp",.9)};
+ im.onerror=function(){URL.revokeObjectURL(u);toast("Это не картинка")};im.src=u};
+$("noimg").onclick=function(){newBlob=null;imgId=null;prevSet("")};
+$("add").onclick=function(){openForm(null)};
+$("cancel").onclick=function(){dl.close()};$("save").onclick=saveForm;
+["q","srt"].forEach(function(i){$(i).oninput=render});
+$("exp").onclick=async function(){
+ try{var d=await claude.use("downloads");if(!d){toast("Скачивание недоступно");return}
+  var out=items.map(function(a){var o=Object.assign({},a);delete o.id;return o});
+  await d.save({filename:"linux-shelf.json",data:JSON.stringify(out,null,2)})}catch(e){toast("Сохранение отменено")}};
+
+async function boot(){
+ var user=null,timer=setTimeout(function(){if(!db)$("note").textContent="Не удаётся получить данные. Откройте страницу через вход в claude.ai."},10000);
+ try{user=await window.claude.use("user")}catch(e){}
+ try{db=await window.claude.use("db")}catch(e){}
+ try{assets=await window.claude.use("assets")}catch(e){}
+ clearTimeout(timer);
+ if(!db){$("grid").textContent="";$("grid").appendChild(el("div","empty","Библиотека доступна только после входа в claude.ai."));$("cnt").textContent="0 приложений";return}
+ try{canEdit=!!(user&&(user.isOwner()||user.canEdit()))}catch(e){}
+ $("add").hidden=!canEdit;$("exp").hidden=!canEdit;
+ if(!assets){$("l_img").hidden=true;$("imgrow").hidden=true}
+ $("note").textContent=canEdit?"Вы владелец: можно добавлять, менять и удалять карточки. Клик по команде копирует её.":"Режим просмотра.";
+ col=db.collection("apps");
+ col.onSnapshot(function(s){items=s.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});render()},
+  function(){$("note").textContent="Ошибка чтения данных. Обновите страницу."})}
+render();boot();
+})();
+</script>
+</body>
+</html>

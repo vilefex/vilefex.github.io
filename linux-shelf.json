@@ -1,0 +1,2716 @@
+[
+  {
+    "added": 1763700000091,
+    "cat": "Игры",
+    "desc": "Историческая стратегия",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.play0ad.zeroad",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "0 A.D.",
+    "status": "stable",
+    "tags": [
+      "стратегия",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.play0ad.zeroad"
+  },
+  {
+    "added": 1763700000011,
+    "cat": "Мультимедиа",
+    "desc": "Минималистичный музыкальный плеер",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.bassi.Amberol",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Amberol",
+    "status": "stable",
+    "tags": [
+      "музыка",
+      "плеер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.bassi.Amberol"
+  },
+  {
+    "added": 1763700000103,
+    "cat": "Разработка",
+    "desc": "IDE для Android",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.google.AndroidStudio",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Android Studio",
+    "status": "stable",
+    "tags": [
+      "ide",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.google.AndroidStudio"
+  },
+  {
+    "added": 1763700000135,
+    "cat": "Офис",
+    "desc": "Карточки для запоминания",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.ankiweb.Anki",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Anki",
+    "status": "stable",
+    "tags": [
+      "учёба",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.ankiweb.Anki"
+  },
+  {
+    "added": 1763700000140,
+    "cat": "Офис",
+    "desc": "Редактор Markdown",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.gitlab.somas.Apostrophe",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Apostrophe",
+    "status": "stable",
+    "tags": [
+      "markdown",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.gitlab.somas.Apostrophe"
+  },
+  {
+    "added": 1763700000016,
+    "cat": "Мультимедиа",
+    "desc": "Цифровая звуковая студия",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.ardour.Ardour",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Ardour",
+    "status": "stable",
+    "tags": [
+      "аудио",
+      "студия",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.ardour.Ardour"
+  },
+  {
+    "added": 1763700000112,
+    "cat": "Разработка",
+    "desc": "Среда разработки для Arduino",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub cc.arduino.IDE2",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Arduino IDE",
+    "status": "stable",
+    "tags": [
+      "arduino",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/cc.arduino.IDE2"
+  },
+  {
+    "added": 1763700000127,
+    "cat": "Утилиты",
+    "desc": "Архиватор KDE",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.kde.ark",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Ark",
+    "status": "stable",
+    "tags": [
+      "архивы",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.kde.ark"
+  },
+  {
+    "added": 1763700000005,
+    "cat": "Мультимедиа",
+    "desc": "Запись и редактирование звука",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.audacityteam.Audacity",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Audacity",
+    "status": "stable",
+    "tags": [
+      "аудио",
+      "редактор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.audacityteam.Audacity"
+  },
+  {
+    "added": 1763700000125,
+    "cat": "Утилиты",
+    "desc": "Коды двухфакторной защиты",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.belmoussaoui.Authenticator",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Authenticator",
+    "status": "stable",
+    "tags": [
+      "2fa",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.belmoussaoui.Authenticator"
+  },
+  {
+    "added": 1763700000124,
+    "cat": "Утилиты",
+    "desc": "Менеджер паролей",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.bitwarden.desktop",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Bitwarden",
+    "status": "stable",
+    "tags": [
+      "пароли",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.bitwarden.desktop"
+  },
+  {
+    "added": 1763700000021,
+    "cat": "Мультимедиа",
+    "desc": "Фоновые звуки для концентрации",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.rafaelmardojai.Blanket",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Blanket",
+    "status": "stable",
+    "tags": [
+      "звуки",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.rafaelmardojai.Blanket"
+  },
+  {
+    "added": 1763700000027,
+    "cat": "Графика",
+    "desc": "3D-моделирование и анимация",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.blender.Blender",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Blender",
+    "status": "stable",
+    "tags": [
+      "3d",
+      "анимация",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.blender.Blender"
+  },
+  {
+    "added": 1763700000076,
+    "cat": "Игры",
+    "desc": "Windows-программы и игры через Wine",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.usebottles.bottles",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Bottles",
+    "status": "stable",
+    "tags": [
+      "wine",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.usebottles.bottles"
+  },
+  {
+    "added": 1763700000047,
+    "cat": "Интернет",
+    "desc": "Браузер с блокировкой рекламы",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.brave.Browser",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Brave",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.brave.Browser"
+  },
+  {
+    "added": 1763700000136,
+    "cat": "Офис",
+    "desc": "Библиотека электронных книг",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.calibre_ebook.calibre",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "calibre",
+    "status": "stable",
+    "tags": [
+      "книги",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.calibre_ebook.calibre"
+  },
+  {
+    "added": 1763700000095,
+    "cat": "Игры",
+    "desc": "Единая библиотека игр",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub page.kramo.Cartridges",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Cartridges",
+    "status": "stable",
+    "tags": [
+      "лаунчер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/page.kramo.Cartridges"
+  },
+  {
+    "added": 1763700000012,
+    "cat": "Мультимедиа",
+    "desc": "Графическая оболочка для mpv",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.github.celluloid_player.Celluloid",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Celluloid",
+    "status": "stable",
+    "tags": [
+      "видео",
+      "плеер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.github.celluloid_player.Celluloid"
+  },
+  {
+    "added": 1763700000085,
+    "cat": "Игры",
+    "desc": "Эмулятор Wii U",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub info.cemu.Cemu",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Cemu",
+    "status": "stable",
+    "tags": [
+      "эмулятор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/info.cemu.Cemu"
+  },
+  {
+    "added": 1763700000046,
+    "cat": "Интернет",
+    "desc": "Открытая основа Chrome",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.chromium.Chromium",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Chromium",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.chromium.Chromium"
+  },
+  {
+    "added": 1763700000014,
+    "cat": "Мультимедиа",
+    "desc": "Современный видеоплеер для GNOME",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.rafostar.Clapper",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Clapper",
+    "status": "stable",
+    "tags": [
+      "видео",
+      "плеер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.rafostar.Clapper"
+  },
+  {
+    "added": 1763700000126,
+    "cat": "Утилиты",
+    "desc": "Проверка хешей файлов",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub dev.geopjr.Collision",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Collision",
+    "status": "stable",
+    "tags": [
+      "хеши",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/dev.geopjr.Collision"
+  },
+  {
+    "added": 1763700000122,
+    "cat": "Утилиты",
+    "desc": "Поиск дубликатов и ненужных файлов",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.qarmin.czkawka",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Czkawka",
+    "status": "stable",
+    "tags": [
+      "файлы",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.qarmin.czkawka"
+  },
+  {
+    "added": 1763700000028,
+    "cat": "Графика",
+    "desc": "Обработка RAW-фото",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.darktable.Darktable",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "darktable",
+    "status": "stable",
+    "tags": [
+      "фото",
+      "raw",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.darktable.Darktable"
+  },
+  {
+    "added": 1763700000108,
+    "cat": "Разработка",
+    "desc": "Клиент баз данных",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.dbeaver.DBeaverCommunity",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "DBeaver Community",
+    "status": "stable",
+    "tags": [
+      "базы данных",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.dbeaver.DBeaverCommunity"
+  },
+  {
+    "added": 1763700000030,
+    "cat": "Графика",
+    "desc": "Менеджер фотоколлекции",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.kde.digikam",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "digiKam",
+    "status": "stable",
+    "tags": [
+      "фото",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.kde.digikam"
+  },
+  {
+    "added": 1763700000059,
+    "cat": "Интернет",
+    "desc": "Голосовой и текстовый чат",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.discordapp.Discord",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Discord",
+    "status": "stable",
+    "tags": [
+      "мессенджер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.discordapp.Discord"
+  },
+  {
+    "added": 1763700000083,
+    "cat": "Игры",
+    "desc": "Эмулятор GameCube и Wii",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.DolphinEmu.dolphin-emu",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Dolphin",
+    "status": "stable",
+    "tags": [
+      "эмулятор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.DolphinEmu.dolphin-emu"
+  },
+  {
+    "added": 1763700000032,
+    "cat": "Графика",
+    "desc": "Лёгкая программа для рисования",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.maoschanz.drawing",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Drawing",
+    "status": "stable",
+    "tags": [
+      "рисование",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.maoschanz.drawing"
+  },
+  {
+    "added": 1763700000086,
+    "cat": "Игры",
+    "desc": "Эмулятор PlayStation 1",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.duckstation.DuckStation",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "DuckStation",
+    "status": "stable",
+    "tags": [
+      "эмулятор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.duckstation.DuckStation"
+  },
+  {
+    "added": 1763700000019,
+    "cat": "Мультимедиа",
+    "desc": "Эффекты и эквалайзер для PipeWire",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.wwmm.easyeffects",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Easy Effects",
+    "status": "stable",
+    "tags": [
+      "аудио",
+      "эквалайзер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.wwmm.easyeffects"
+  },
+  {
+    "added": 1763700000062,
+    "cat": "Интернет",
+    "desc": "Клиент сети Matrix",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub im.riot.Riot",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Element",
+    "status": "stable",
+    "tags": [
+      "мессенджер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/im.riot.Riot"
+  },
+  {
+    "added": 1763700000052,
+    "cat": "Интернет",
+    "desc": "Браузер GNOME",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.Epiphany",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "GNOME Web",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.Epiphany"
+  },
+  {
+    "added": 1763700000057,
+    "cat": "Интернет",
+    "desc": "Почта, календарь и контакты",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.Evolution",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Evolution",
+    "status": "stable",
+    "tags": [
+      "почта",
+      "календарь",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.Evolution"
+  },
+  {
+    "added": 1763700000043,
+    "cat": "Графика",
+    "desc": "Пипетка для цветов",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.finefindus.eyedropper",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Eyedropper",
+    "status": "stable",
+    "tags": [
+      "цвет",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.finefindus.eyedropper"
+  },
+  {
+    "added": 1763700000053,
+    "cat": "Интернет",
+    "desc": "Лёгкий браузер KDE",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.kde.falkon",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Falkon",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.kde.falkon"
+  },
+  {
+    "added": 1763700000120,
+    "cat": "Утилиты",
+    "desc": "Запись образов Fedora на флешку",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.fedoraproject.MediaWriter",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Fedora Media Writer",
+    "status": "stable",
+    "tags": [
+      "iso",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.fedoraproject.MediaWriter"
+  },
+  {
+    "added": 1763700000072,
+    "cat": "Интернет",
+    "desc": "Все мессенджеры в одном окне",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.ferdium.Ferdium",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Ferdium",
+    "status": "stable",
+    "tags": [
+      "мессенджер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.ferdium.Ferdium"
+  },
+  {
+    "added": 1763700000068,
+    "cat": "Интернет",
+    "desc": "Клиент FTP и SFTP",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.filezillaproject.Filezilla",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "FileZilla",
+    "status": "stable",
+    "tags": [
+      "ftp",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.filezillaproject.Filezilla"
+  },
+  {
+    "added": 1763700000045,
+    "cat": "Интернет",
+    "desc": "Браузер Mozilla",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.mozilla.firefox",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Firefox",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.mozilla.firefox"
+  },
+  {
+    "added": 1763700000042,
+    "cat": "Графика",
+    "desc": "Скриншоты с аннотациями",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.flameshot.Flameshot",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Flameshot",
+    "status": "stable",
+    "tags": [
+      "скриншоты",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.flameshot.Flameshot"
+  },
+  {
+    "added": 1763700000115,
+    "cat": "Утилиты",
+    "desc": "Управление правами Flatpak-приложений",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.tchx84.Flatseal",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Flatseal",
+    "status": "stable",
+    "tags": [
+      "flatpak",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.tchx84.Flatseal"
+  },
+  {
+    "added": 1763700000050,
+    "cat": "Интернет",
+    "desc": "Форк Firefox с расширенными настройками",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub one.ablaze.floorp",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Floorp",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/one.ablaze.floorp"
+  },
+  {
+    "added": 1763700000088,
+    "cat": "Игры",
+    "desc": "Эмулятор Dreamcast",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.flycast.Flycast",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Flycast",
+    "status": "stable",
+    "tags": [
+      "эмулятор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.flycast.Flycast"
+  },
+  {
+    "added": 1763700000137,
+    "cat": "Офис",
+    "desc": "Читалка электронных книг",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.johnfactotum.Foliate",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Foliate",
+    "status": "stable",
+    "tags": [
+      "книги",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.johnfactotum.Foliate"
+  },
+  {
+    "added": 1763700000067,
+    "cat": "Интернет",
+    "desc": "Торрент-клиент GNOME",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub de.haeckerfelix.Fragments",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Fragments",
+    "status": "stable",
+    "tags": [
+      "торренты",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/de.haeckerfelix.Fragments"
+  },
+  {
+    "added": 1763700000035,
+    "cat": "Графика",
+    "desc": "Параметрическое 3D-проектирование",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.freecad.FreeCAD",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "FreeCAD",
+    "status": "stable",
+    "tags": [
+      "3d",
+      "cad",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.freecad.FreeCAD"
+  },
+  {
+    "added": 1763700000101,
+    "cat": "Разработка",
+    "desc": "Лёгкая IDE",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.geany.Geany",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Geany",
+    "status": "stable",
+    "tags": [
+      "ide",
+      "лёгкое",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.geany.Geany"
+  },
+  {
+    "added": 1763700000056,
+    "cat": "Интернет",
+    "desc": "Почтовый клиент GNOME",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.Geary",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Geary",
+    "status": "stable",
+    "tags": [
+      "почта",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.Geary"
+  },
+  {
+    "added": 1763700000024,
+    "cat": "Графика",
+    "desc": "Растровый графический редактор",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gimp.GIMP",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "GIMP",
+    "status": "stable",
+    "tags": [
+      "фото",
+      "редактор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gimp.GIMP"
+  },
+  {
+    "added": 1763700000128,
+    "cat": "Утилиты",
+    "desc": "Виртуальные машины",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.Boxes",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Boxes",
+    "status": "stable",
+    "tags": [
+      "виртуализация",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.Boxes"
+  },
+  {
+    "added": 1763700000099,
+    "cat": "Разработка",
+    "desc": "IDE для GNOME",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.Builder",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "GNOME Builder",
+    "status": "stable",
+    "tags": [
+      "ide",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.Builder"
+  },
+  {
+    "added": 1763700000039,
+    "cat": "Графика",
+    "desc": "Игровой движок",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.godotengine.Godot",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Godot Engine",
+    "status": "stable",
+    "tags": [
+      "игры",
+      "движок",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.godotengine.Godot"
+  },
+  {
+    "added": 1763700000040,
+    "cat": "Графика",
+    "desc": "Просмотр изображений",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.kde.gwenview",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Gwenview",
+    "status": "stable",
+    "tags": [
+      "просмотр",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.kde.gwenview"
+  },
+  {
+    "added": 1763700000006,
+    "cat": "Мультимедиа",
+    "desc": "Конвертер видео",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub fr.handbrake.ghb",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "HandBrake",
+    "status": "stable",
+    "tags": [
+      "видео",
+      "конвертер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/fr.handbrake.ghb"
+  },
+  {
+    "added": 1763700000013,
+    "cat": "Мультимедиа",
+    "desc": "Видеоплеер на базе mpv",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.kde.haruna",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Haruna",
+    "status": "stable",
+    "tags": [
+      "видео",
+      "плеер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.kde.haruna"
+  },
+  {
+    "added": 1763700000075,
+    "cat": "Игры",
+    "desc": "Лаунчер для Epic, GOG и Amazon Games",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.heroicgameslauncher.hgl",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Heroic Games Launcher",
+    "status": "stable",
+    "tags": [
+      "лаунчер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.heroicgameslauncher.hgl"
+  },
+  {
+    "added": 1763700000119,
+    "cat": "Утилиты",
+    "desc": "Запись ISO-образов на флешку",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.gitlab.adhami3310.Impression",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Impression",
+    "status": "stable",
+    "tags": [
+      "iso",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.gitlab.adhami3310.Impression"
+  },
+  {
+    "added": 1763700000026,
+    "cat": "Графика",
+    "desc": "Векторная графика",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.inkscape.Inkscape",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Inkscape",
+    "status": "stable",
+    "tags": [
+      "вектор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.inkscape.Inkscape"
+  },
+  {
+    "added": 1763700000107,
+    "cat": "Разработка",
+    "desc": "Клиент REST и GraphQL",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub rest.insomnia.Insomnia",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Insomnia",
+    "status": "stable",
+    "tags": [
+      "api",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/rest.insomnia.Insomnia"
+  },
+  {
+    "added": 1763700000104,
+    "cat": "Разработка",
+    "desc": "IDE для Java и Kotlin",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "IntelliJ IDEA Community",
+    "status": "stable",
+    "tags": [
+      "ide",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.jetbrains.IntelliJ-IDEA-Community"
+  },
+  {
+    "added": 1763700000092,
+    "cat": "Игры",
+    "desc": "Клиент магазина itch.io",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.itch.itch",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "itch",
+    "status": "stable",
+    "tags": [
+      "магазин",
+      "инди",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.itch.itch"
+  },
+  {
+    "added": 1763700000133,
+    "cat": "Офис",
+    "desc": "Заметки с синхронизацией",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.cozic.joplin_desktop",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Joplin",
+    "status": "stable",
+    "tags": [
+      "заметки",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.cozic.joplin_desktop"
+  },
+  {
+    "added": 1763700000100,
+    "cat": "Разработка",
+    "desc": "Текстовый редактор KDE",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.kde.kate",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Kate",
+    "status": "stable",
+    "tags": [
+      "редактор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.kde.kate"
+  },
+  {
+    "added": 1763700000002,
+    "cat": "Мультимедиа",
+    "desc": "Нелинейный видеоредактор от KDE",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.kde.kdenlive",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Kdenlive",
+    "status": "stable",
+    "tags": [
+      "видеомонтаж",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.kde.kdenlive"
+  },
+  {
+    "added": 1763700000123,
+    "cat": "Утилиты",
+    "desc": "Менеджер паролей",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.keepassxc.KeePassXC",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "KeePassXC",
+    "status": "stable",
+    "tags": [
+      "пароли",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.keepassxc.KeePassXC"
+  },
+  {
+    "added": 1763700000015,
+    "cat": "Мультимедиа",
+    "desc": "Медиацентр",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub tv.kodi.Kodi",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Kodi",
+    "status": "stable",
+    "tags": [
+      "медиацентр",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/tv.kodi.Kodi"
+  },
+  {
+    "added": 1763700000023,
+    "cat": "Мультимедиа",
+    "desc": "Простая запись экрана",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.github.seadve.Kooha",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Kooha",
+    "status": "stable",
+    "tags": [
+      "запись",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.github.seadve.Kooha"
+  },
+  {
+    "added": 1763700000025,
+    "cat": "Графика",
+    "desc": "Цифровая живопись",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.kde.krita",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Krita",
+    "status": "stable",
+    "tags": [
+      "рисование",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.kde.krita"
+  },
+  {
+    "added": 1763700000102,
+    "cat": "Разработка",
+    "desc": "Редактор кода на Rust",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub dev.lapce.lapce",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Lapce",
+    "status": "stable",
+    "tags": [
+      "редактор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/dev.lapce.lapce"
+  },
+  {
+    "added": 1763700000129,
+    "cat": "Офис",
+    "desc": "Офисный пакет",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.libreoffice.LibreOffice",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "LibreOffice",
+    "status": "stable",
+    "tags": [
+      "офис",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.libreoffice.LibreOffice"
+  },
+  {
+    "added": 1763700000048,
+    "cat": "Интернет",
+    "desc": "Приватная сборка Firefox",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.gitlab.librewolf-community",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "LibreWolf",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "приватность",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.gitlab.librewolf-community"
+  },
+  {
+    "added": 1763700000017,
+    "cat": "Мультимедиа",
+    "desc": "Создание музыки",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.lmms.LMMS",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "LMMS",
+    "status": "stable",
+    "tags": [
+      "музыка",
+      "студия",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.lmms.LMMS"
+  },
+  {
+    "added": 1763700000132,
+    "cat": "Офис",
+    "desc": "Заметки и база знаний",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.logseq.Logseq",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Logseq",
+    "status": "stable",
+    "tags": [
+      "заметки",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.logseq.Logseq"
+  },
+  {
+    "added": 1763700000010,
+    "cat": "Мультимедиа",
+    "desc": "Современный музыкальный плеер",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.Lollypop",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Lollypop",
+    "status": "stable",
+    "tags": [
+      "музыка",
+      "плеер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.Lollypop"
+  },
+  {
+    "added": 1763700000041,
+    "cat": "Графика",
+    "desc": "Просмотр изображений GNOME",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.Loupe",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Loupe",
+    "status": "stable",
+    "tags": [
+      "просмотр",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.Loupe"
+  },
+  {
+    "added": 1763700000074,
+    "cat": "Игры",
+    "desc": "Запуск игр из разных источников",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.lutris.Lutris",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Lutris",
+    "status": "stable",
+    "tags": [
+      "wine",
+      "лаунчер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.lutris.Lutris"
+  },
+  {
+    "added": 1763700000110,
+    "cat": "Разработка",
+    "desc": "Сравнение файлов и папок",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.meld",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Meld",
+    "status": "stable",
+    "tags": [
+      "diff",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.meld"
+  },
+  {
+    "added": 1763700000087,
+    "cat": "Игры",
+    "desc": "Эмулятор Nintendo DS",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.kuribo64.melonDS",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "melonDS",
+    "status": "stable",
+    "tags": [
+      "эмулятор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.kuribo64.melonDS"
+  },
+  {
+    "added": 1763700000117,
+    "cat": "Утилиты",
+    "desc": "Монитор системы",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.missioncenter.MissionCenter",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Mission Center",
+    "status": "stable",
+    "tags": [
+      "монитор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.missioncenter.MissionCenter"
+  },
+  {
+    "added": 1763700000018,
+    "cat": "Мультимедиа",
+    "desc": "ПО для диджеев",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.mixxx.Mixxx",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Mixxx",
+    "status": "stable",
+    "tags": [
+      "музыка",
+      "диджей",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.mixxx.Mixxx"
+  },
+  {
+    "added": 1763700000094,
+    "cat": "Игры",
+    "desc": "Потоковая передача игр с ПК",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.moonlight_stream.Moonlight",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Moonlight",
+    "status": "stable",
+    "tags": [
+      "стриминг",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.moonlight_stream.Moonlight"
+  },
+  {
+    "added": 1763600000006,
+    "cat": "Мультимедиа",
+    "desc": "Минималистичный и очень быстрый видеоплеер с гибкой настройкой через конфиги и скрипты.",
+    "files": [],
+    "img": "",
+    "install": "",
+    "installs": [
+      {
+        "cmd": "sudo pacman -S mpv",
+        "distro": "Arch"
+      },
+      {
+        "cmd": "sudo apt install mpv",
+        "distro": "Debian / Ubuntu"
+      },
+      {
+        "cmd": "sudo dnf install mpv",
+        "distro": "Fedora"
+      },
+      {
+        "cmd": "flatpak install flathub io.mpv.Mpv",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "mpv",
+    "status": "stable",
+    "tags": [
+      "видео",
+      "лёгкое",
+      "скрипты"
+    ],
+    "url": "https://mpv.io"
+  },
+  {
+    "added": 1763700000033,
+    "cat": "Графика",
+    "desc": "Растровый редактор для художников",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.mypaint.MyPaint",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "MyPaint",
+    "status": "stable",
+    "tags": [
+      "рисование",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.mypaint.MyPaint"
+  },
+  {
+    "added": 1763700000071,
+    "cat": "Интернет",
+    "desc": "RSS-читалка",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.gitlab.news_flash.NewsFlash",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "NewsFlash",
+    "status": "stable",
+    "tags": [
+      "rss",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.gitlab.news_flash.NewsFlash"
+  },
+  {
+    "added": 1763700000069,
+    "cat": "Интернет",
+    "desc": "Синхронизация с Nextcloud",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.nextcloud.desktopclient.nextcloud",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Nextcloud",
+    "status": "stable",
+    "tags": [
+      "облако",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.nextcloud.desktopclient.nextcloud"
+  },
+  {
+    "added": 1763700000001,
+    "cat": "Мультимедиа",
+    "desc": "Запись экрана и стриминг",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.obsproject.Studio",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "OBS Studio",
+    "status": "stable",
+    "tags": [
+      "запись",
+      "стрим",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.obsproject.Studio"
+  },
+  {
+    "added": 1763700000131,
+    "cat": "Офис",
+    "desc": "Заметки в Markdown",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub md.obsidian.Obsidian",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Obsidian",
+    "status": "stable",
+    "tags": [
+      "заметки",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/md.obsidian.Obsidian"
+  },
+  {
+    "added": 1763700000138,
+    "cat": "Офис",
+    "desc": "Просмотр PDF и документов",
+    "installs": [
+      {
+        "distro": "Flatpak",
+        "cmd": "flatpak install flathub org.kde.okular"
+      }
+    ],
+    "name": "Okular",
+    "status": "stable",
+    "tags": [
+      "pdf",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.kde.okular",
+    "files": [],
+    "install": "",
+    "img": ""
+  },
+  {
+    "added": 1763600000003,
+    "cat": "Мультимедиа",
+    "desc": "Нелинейный видеоредактор нового поколения, находится в активной разработке.",
+    "files": [],
+    "install": "",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.olivevideoeditor.Olive",
+        "distro": "Flatpak"
+      },
+      {
+        "cmd": "yay -S olive",
+        "distro": "Arch"
+      }
+    ],
+    "name": "Olive",
+    "status": "alpha",
+    "tags": [
+      "видеомонтаж",
+      "альфа",
+      "экспериментальное"
+    ],
+    "url": "https://www.olivevideoeditor.org"
+  },
+  {
+    "added": 1763700000130,
+    "cat": "Офис",
+    "desc": "Офисный пакет",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.onlyoffice.desktopeditors",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "ONLYOFFICE",
+    "status": "stable",
+    "tags": [
+      "офис",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.onlyoffice.desktopeditors"
+  },
+  {
+    "added": 1763700000036,
+    "cat": "Графика",
+    "desc": "3D-модели из кода",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.openscad.OpenSCAD",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "OpenSCAD",
+    "status": "stable",
+    "tags": [
+      "3d",
+      "cad",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.openscad.OpenSCAD"
+  },
+  {
+    "added": 1763700000003,
+    "cat": "Мультимедиа",
+    "desc": "Простой видеоредактор",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.openshot.OpenShot",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "OpenShot",
+    "status": "stable",
+    "tags": [
+      "видеомонтаж",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.openshot.OpenShot"
+  },
+  {
+    "added": 1763700000093,
+    "cat": "Игры",
+    "desc": "Ритм-игра",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub sh.ppy.osu",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "osu!",
+    "status": "stable",
+    "tags": [
+      "ритм",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/sh.ppy.osu"
+  },
+  {
+    "added": 1763700000022,
+    "cat": "Мультимедиа",
+    "desc": "Загрузка видео и аудио через yt-dlp",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.nickvision.tubeconverter",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Parabolic",
+    "status": "stable",
+    "tags": [
+      "загрузка",
+      "видео",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.nickvision.tubeconverter"
+  },
+  {
+    "added": 1763700000081,
+    "cat": "Игры",
+    "desc": "Эмулятор PlayStation 2",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.pcsx2.PCSX2",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "PCSX2",
+    "status": "stable",
+    "tags": [
+      "эмулятор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.pcsx2.PCSX2"
+  },
+  {
+    "added": 1763700000037,
+    "cat": "Графика",
+    "desc": "2D-анимация",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.pencil2d.Pencil2D",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Pencil2D",
+    "status": "stable",
+    "tags": [
+      "анимация",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.pencil2d.Pencil2D"
+  },
+  {
+    "added": 1763700000121,
+    "cat": "Утилиты",
+    "desc": "Резервное копирование",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.World.PikaBackup",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Pika Backup",
+    "status": "stable",
+    "tags": [
+      "бэкап",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.World.PikaBackup"
+  },
+  {
+    "added": 1763700000031,
+    "cat": "Графика",
+    "desc": "Простой графический редактор",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.PintaProject.Pinta",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Pinta",
+    "status": "stable",
+    "tags": [
+      "рисование",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.PintaProject.Pinta"
+  },
+  {
+    "added": 1763700000004,
+    "cat": "Мультимедиа",
+    "desc": "Видеоредактор для GNOME",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.pitivi.Pitivi",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Pitivi",
+    "status": "stable",
+    "tags": [
+      "видеомонтаж",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.pitivi.Pitivi"
+  },
+  {
+    "added": 1763700000141,
+    "cat": "Офис",
+    "desc": "Список задач",
+    "installs": [
+      {
+        "distro": "Flatpak",
+        "cmd": "flatpak install flathub io.github.alainm23.planify"
+      }
+    ],
+    "name": "Planify",
+    "status": "stable",
+    "tags": [
+      "задачи",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.github.alainm23.planify",
+    "files": [],
+    "install": "",
+    "img": ""
+  },
+  {
+    "added": 1763700000109,
+    "cat": "Разработка",
+    "desc": "Управление контейнерами",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.podman_desktop.PodmanDesktop",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Podman Desktop",
+    "status": "stable",
+    "tags": [
+      "контейнеры",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.podman_desktop.PodmanDesktop"
+  },
+  {
+    "added": 1763700000106,
+    "cat": "Разработка",
+    "desc": "Тестирование API",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.getpostman.Postman",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Postman",
+    "status": "stable",
+    "tags": [
+      "api",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.getpostman.Postman"
+  },
+  {
+    "added": 1763700000084,
+    "cat": "Игры",
+    "desc": "Эмулятор PSP",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.ppsspp.PPSSPP",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "PPSSPP",
+    "status": "stable",
+    "tags": [
+      "эмулятор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.ppsspp.PPSSPP"
+  },
+  {
+    "added": 1763700000077,
+    "cat": "Игры",
+    "desc": "Лаунчер Minecraft",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.prismlauncher.PrismLauncher",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Prism Launcher",
+    "status": "stable",
+    "tags": [
+      "minecraft",
+      "лаунчер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.prismlauncher.PrismLauncher"
+  },
+  {
+    "added": 1763700000078,
+    "cat": "Игры",
+    "desc": "Установка Proton-GE и Wine-GE",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.davidotek.pupgui2",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "ProtonUp-Qt",
+    "status": "stable",
+    "tags": [
+      "proton",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.davidotek.pupgui2"
+  },
+  {
+    "added": 1763700000114,
+    "cat": "Разработка",
+    "desc": "Терминал GNOME",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub app.devsuite.Ptyxis",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Ptyxis",
+    "status": "stable",
+    "tags": [
+      "терминал",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/app.devsuite.Ptyxis"
+  },
+  {
+    "added": 1763700000105,
+    "cat": "Разработка",
+    "desc": "IDE для Python",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.jetbrains.PyCharm-Community",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "PyCharm Community",
+    "status": "stable",
+    "tags": [
+      "ide",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.jetbrains.PyCharm-Community"
+  },
+  {
+    "added": 1763700000065,
+    "cat": "Интернет",
+    "desc": "Торрент-клиент",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.qbittorrent.qBittorrent",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "qBittorrent",
+    "status": "stable",
+    "tags": [
+      "торренты",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.qbittorrent.qBittorrent"
+  },
+  {
+    "added": 1763600000005,
+    "cat": "Браузеры",
+    "desc": "Браузер с управлением с клавиатуры в стиле Vim, построенный на Qt WebEngine.",
+    "files": [],
+    "install": "",
+    "installs": [
+      {
+        "cmd": "sudo pacman -S qutebrowser",
+        "distro": "Arch"
+      },
+      {
+        "cmd": "sudo apt install qutebrowser",
+        "distro": "Debian / Ubuntu"
+      },
+      {
+        "cmd": "sudo dnf install qutebrowser",
+        "distro": "Fedora"
+      },
+      {
+        "cmd": "flatpak install flathub org.qutebrowser.qutebrowser",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "qutebrowser",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "vim",
+      "клавиатура"
+    ],
+    "url": "https://qutebrowser.org"
+  },
+  {
+    "added": 1763700000029,
+    "cat": "Графика",
+    "desc": "Обработка RAW-фото",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.rawtherapee.RawTherapee",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "RawTherapee",
+    "status": "stable",
+    "tags": [
+      "фото",
+      "raw",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.rawtherapee.RawTherapee"
+  },
+  {
+    "added": 1763700000118,
+    "cat": "Утилиты",
+    "desc": "Монитор ресурсов",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.nokyan.Resources",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Resources",
+    "status": "stable",
+    "tags": [
+      "монитор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.nokyan.Resources"
+  },
+  {
+    "added": 1763700000080,
+    "cat": "Игры",
+    "desc": "Фронтенд для эмуляторов",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.libretro.RetroArch",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "RetroArch",
+    "status": "stable",
+    "tags": [
+      "эмулятор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.libretro.RetroArch"
+  },
+  {
+    "added": 1763700000008,
+    "cat": "Мультимедиа",
+    "desc": "Музыкальный плеер GNOME",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.Rhythmbox3",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Rhythmbox",
+    "status": "stable",
+    "tags": [
+      "музыка",
+      "плеер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.Rhythmbox3"
+  },
+  {
+    "added": 1763700000082,
+    "cat": "Игры",
+    "desc": "Эмулятор PlayStation 3",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.rpcs3.RPCS3",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "RPCS3",
+    "status": "stable",
+    "tags": [
+      "эмулятор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.rpcs3.RPCS3"
+  },
+  {
+    "added": 1763700000034,
+    "cat": "Графика",
+    "desc": "Вёрстка и DTP",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.scribus.Scribus",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Scribus",
+    "status": "stable",
+    "tags": [
+      "вёрстка",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.scribus.Scribus"
+  },
+  {
+    "added": 1763700000089,
+    "cat": "Игры",
+    "desc": "Запуск классических квестов",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.scummvm.ScummVM",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "ScummVM",
+    "status": "stable",
+    "tags": [
+      "квесты",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.scummvm.ScummVM"
+  },
+  {
+    "added": 1763700000020,
+    "cat": "Мультимедиа",
+    "desc": "Интернет-радио",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub de.haeckerfelix.Shortwave",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Shortwave",
+    "status": "stable",
+    "tags": [
+      "радио",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/de.haeckerfelix.Shortwave"
+  },
+  {
+    "added": 1763600000004,
+    "cat": "Мультимедиа",
+    "desc": "Кроссплатформенный видеоредактор с большим набором фильтров и поддержкой множества форматов.",
+    "files": [],
+    "install": "",
+    "installs": [
+      {
+        "cmd": "sudo pacman -S shotcut",
+        "distro": "Arch"
+      },
+      {
+        "cmd": "sudo apt install shotcut",
+        "distro": "Debian / Ubuntu"
+      },
+      {
+        "cmd": "flatpak install flathub org.shotcut.Shotcut",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Shotcut",
+    "status": "stable",
+    "tags": [
+      "видеомонтаж",
+      "креатив"
+    ],
+    "url": "https://shotcut.org"
+  },
+  {
+    "added": 1763700000044,
+    "cat": "Графика",
+    "desc": "Менеджер фотографий",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.gnome.Shotwell",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Shotwell",
+    "status": "stable",
+    "tags": [
+      "фото",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.gnome.Shotwell"
+  },
+  {
+    "added": 1763700000061,
+    "cat": "Интернет",
+    "desc": "Защищённый мессенджер",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.signal.Signal",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Signal",
+    "status": "stable",
+    "tags": [
+      "мессенджер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.signal.Signal"
+  },
+  {
+    "added": 1763700000064,
+    "cat": "Интернет",
+    "desc": "Рабочий мессенджер",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.slack.Slack",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Slack",
+    "status": "stable",
+    "tags": [
+      "мессенджер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.slack.Slack"
+  },
+  {
+    "added": 1763700000079,
+    "cat": "Игры",
+    "desc": "Запуск Roblox на Linux",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.vinegarhq.Sober",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Sober",
+    "status": "stable",
+    "tags": [
+      "roblox",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.vinegarhq.Sober"
+  },
+  {
+    "added": 1763700000007,
+    "cat": "Мультимедиа",
+    "desc": "Клиент музыкального сервиса",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.spotify.Client",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Spotify",
+    "status": "stable",
+    "tags": [
+      "музыка",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.spotify.Client"
+  },
+  {
+    "added": 1763700000073,
+    "cat": "Игры",
+    "desc": "Игровой магазин и клиент",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.valvesoftware.Steam",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Steam",
+    "status": "stable",
+    "tags": [
+      "магазин",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.valvesoftware.Steam"
+  },
+  {
+    "added": 1763700000009,
+    "cat": "Мультимедиа",
+    "desc": "Плеер для большой музыкальной коллекции",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.strawberrymusicplayer.strawberry",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Strawberry",
+    "status": "stable",
+    "tags": [
+      "музыка",
+      "плеер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.strawberrymusicplayer.strawberry"
+  },
+  {
+    "added": 1763700000090,
+    "cat": "Игры",
+    "desc": "Гонки с бонусами",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub net.supertuxkart.SuperTuxKart",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "SuperTuxKart",
+    "status": "stable",
+    "tags": [
+      "гонки",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/net.supertuxkart.SuperTuxKart"
+  },
+  {
+    "added": 1763700000038,
+    "cat": "Графика",
+    "desc": "Векторная 2D-анимация",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.synfig.SynfigStudio",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Synfig Studio",
+    "status": "stable",
+    "tags": [
+      "анимация",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.synfig.SynfigStudio"
+  },
+  {
+    "added": 1763700000058,
+    "cat": "Интернет",
+    "desc": "Мессенджер",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.telegram.desktop",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Telegram Desktop",
+    "status": "stable",
+    "tags": [
+      "мессенджер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.telegram.desktop"
+  },
+  {
+    "added": 1763700000055,
+    "cat": "Интернет",
+    "desc": "Почтовый клиент",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.mozilla.Thunderbird",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Thunderbird",
+    "status": "stable",
+    "tags": [
+      "почта",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.mozilla.Thunderbird"
+  },
+  {
+    "added": 1763700000054,
+    "cat": "Интернет",
+    "desc": "Установка и запуск Tor Browser",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.micahflee.torbrowser-launcher",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Tor Browser Launcher",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "приватность",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.micahflee.torbrowser-launcher"
+  },
+  {
+    "added": 1763700000066,
+    "cat": "Интернет",
+    "desc": "Лёгкий торрент-клиент",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.transmissionbt.Transmission",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Transmission",
+    "status": "stable",
+    "tags": [
+      "торренты",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.transmissionbt.Transmission"
+  },
+  {
+    "added": 1763700000070,
+    "cat": "Интернет",
+    "desc": "Клиент Fediverse",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub dev.geopjr.Tuba",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Tuba",
+    "status": "stable",
+    "tags": [
+      "соцсети",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/dev.geopjr.Tuba"
+  },
+  {
+    "added": 1763700000049,
+    "cat": "Интернет",
+    "desc": "Настраиваемый браузер",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.vivaldi.Vivaldi",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Vivaldi",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.vivaldi.Vivaldi"
+  },
+  {
+    "added": 1763700000000,
+    "cat": "Мультимедиа",
+    "desc": "Универсальный медиаплеер для видео и аудио",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.videolan.VLC",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "VLC",
+    "status": "stable",
+    "tags": [
+      "видео",
+      "аудио",
+      "плеер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.videolan.VLC"
+  },
+  {
+    "added": 1763700000096,
+    "cat": "Разработка",
+    "desc": "Редактор кода",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.visualstudio.code",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Visual Studio Code",
+    "status": "stable",
+    "tags": [
+      "редактор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.visualstudio.code"
+  },
+  {
+    "added": 1763700000097,
+    "cat": "Разработка",
+    "desc": "VS Code без телеметрии",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.vscodium.codium",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "VSCodium",
+    "status": "stable",
+    "tags": [
+      "редактор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.vscodium.codium"
+  },
+  {
+    "added": 1763700000116,
+    "cat": "Утилиты",
+    "desc": "Управление Flatpak-приложениями",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.github.flattool.Warehouse",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Warehouse",
+    "status": "stable",
+    "tags": [
+      "flatpak",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.github.flattool.Warehouse"
+  },
+  {
+    "added": 1763700000060,
+    "cat": "Интернет",
+    "desc": "Альтернативный клиент Discord",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub io.github.spacingbat3.webcord",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "WebCord",
+    "status": "stable",
+    "tags": [
+      "мессенджер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/io.github.spacingbat3.webcord"
+  },
+  {
+    "added": 1763700000113,
+    "cat": "Разработка",
+    "desc": "Терминал на Rust",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.wezfurlong.wezterm",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "WezTerm",
+    "status": "stable",
+    "tags": [
+      "терминал",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.wezfurlong.wezterm"
+  },
+  {
+    "added": 1763700000111,
+    "cat": "Разработка",
+    "desc": "Анализ сетевого трафика",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.wireshark.Wireshark",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Wireshark",
+    "status": "stable",
+    "tags": [
+      "сеть",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.wireshark.Wireshark"
+  },
+  {
+    "added": 1763700000139,
+    "cat": "Офис",
+    "desc": "Рукописные заметки и разметка PDF",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub com.github.xournalpp.xournalpp",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Xournal++",
+    "status": "stable",
+    "tags": [
+      "заметки",
+      "pdf",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/com.github.xournalpp.xournalpp"
+  },
+  {
+    "added": 1763700000098,
+    "cat": "Разработка",
+    "desc": "Быстрый редактор кода",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub dev.zed.Zed",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Zed",
+    "status": "stable",
+    "tags": [
+      "редактор",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/dev.zed.Zed"
+  },
+  {
+    "added": 1763700000051,
+    "cat": "Интернет",
+    "desc": "Браузер на базе Firefox",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub app.zen_browser.zen",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Zen Browser",
+    "status": "stable",
+    "tags": [
+      "браузер",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/app.zen_browser.zen"
+  },
+  {
+    "added": 1763700000063,
+    "cat": "Интернет",
+    "desc": "Видеоконференции",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub us.zoom.Zoom",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Zoom",
+    "status": "stable",
+    "tags": [
+      "видеосвязь",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/us.zoom.Zoom"
+  },
+  {
+    "added": 1763700000134,
+    "cat": "Офис",
+    "desc": "Менеджер литературы",
+    "installs": [
+      {
+        "cmd": "flatpak install flathub org.zotero.Zotero",
+        "distro": "Flatpak"
+      }
+    ],
+    "name": "Zotero",
+    "status": "stable",
+    "tags": [
+      "исследования",
+      "flathub"
+    ],
+    "url": "https://flathub.org/apps/org.zotero.Zotero"
+  }
+]

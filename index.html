@@ -84,8 +84,8 @@ dialog .in{width:100%}textarea{resize:vertical;min-height:76px}
 <nav><div class="wrap">
  <div class="logo">Linux <b>Shelf</b></div>
  <button class="btn" id="theme" title="Сменить тему">◐</button>
- <button class="btn" id="exp" hidden>Экспорт JSON</button>
- <button class="btn pri" id="add" hidden>＋ Добавить</button>
+ <button class="btn pri" id="add">＋ Добавить</button>
+ <button class="btn" id="exp">Скачать JSON</button>
 </div></nav>
 <div class="wrap">
  <div class="hero">
@@ -106,8 +106,7 @@ dialog .in{width:100%}textarea{resize:vertical;min-height:76px}
 <dialog id="dlg">
  <h2 id="dt">Новое приложение</h2>
  <label>Название *</label><input class="in" id="f_name" maxlength="60">
- <label id="l_img">Картинка (квадратная)</label>
- <div class="imgrow" id="imgrow"><div class="prev" id="prev">?</div><div><input type="file" id="f_img" accept="image/png,image/jpeg,image/webp,image/gif" hidden><button class="btn" id="pick" type="button">Выбрать картинку</button> <button class="btn" id="noimg" type="button">Убрать</button><p class="hint">Обрежется по центру до квадрата, максимум 512×512.</p></div></div>
+ <label>Ссылка на картинку</label><input class="in" id="f_imgurl" type="url" placeholder="https://…">
  <div class="row">
   <div><label>Категория</label><input class="in" id="f_cat" list="cats" maxlength="30" placeholder="Редакторы, Игры…"><datalist id="cats"></datalist></div>
   <div><label>Статус</label><select class="in" id="f_st"><option value="stable">Стабильное</option><option value="beta">Бета</option><option value="alpha">Альфа</option></select></div>
@@ -127,7 +126,8 @@ dialog .in{width:100%}textarea{resize:vertical;min-height:76px}
 <script>
 (function(){
 var $=function(i){return document.getElementById(i)};
-var items=[],cat="",stf="",col=null,db=null,canEdit=false,editId=null,dl=$("dlg"),assets=null,newBlob=null,imgId=null,oldImg=null;
+var items=[],cat="",stf="",canEdit=true,editId=null,dl=$("dlg");
+var LOCAL_KEY="linux-shelf-local-v1";
 var COV=[["#8b5cf6","#3b1a8f"],["#c084fc","#5b1f8f"],["#6366f1","#26237a"],["#d946ef","#6a1a7a"],["#a855f7","#4a1a8a"],["#7c3aed","#2e1065"],["#ec4899","#6b1a45"]];
 var ST={stable:"Стабильное",beta:"Бета",alpha:"Альфа"};
 var DISTROS=["Arch","Debian / Ubuntu","Fedora","openSUSE","Nix","Flatpak","Snap","Windows / Wine","Любой дистрибутив","Другое"];
@@ -170,7 +170,7 @@ function render(){
 function card(a){
  var c=el("article","card"),cv=el("div","cover",(a.name||"?").charAt(0).toUpperCase()),k=cov(a.name||"");
  cv.style.background="linear-gradient(135deg,"+k[0]+","+k[1]+")";
- if(a.img){var im=new Image();im.src="/_blob/"+a.img;im.alt=a.name||"";im.loading="lazy";im.onerror=function(){im.remove()};cv.appendChild(im)}
+ if(a.image&&safeUrl(a.image)){var im=new Image();im.src=a.image;im.alt=a.name||"";im.loading="lazy";im.onerror=function(){im.remove()};cv.appendChild(im)}
  cv.appendChild(el("span","bd",a.cat||"Без категории"));cv.appendChild(el("span","st "+(a.status||"stable"),ST[a.status]||ST.stable));c.appendChild(cv);
  var b=el("div","body");b.appendChild(el("h3","nm",a.name));
  if(a.desc)b.appendChild(el("p","desc",a.desc));
@@ -188,7 +188,7 @@ function card(a){
  var ac=el("div","acts"),u=safeUrl(a.url);
  if(u){var l=el("a",null,"Сайт ↗");l.href=u;l.target="_blank";l.rel="noopener noreferrer";ac.appendChild(l)}
  if(canEdit){var e=el("button",null,"Изменить");e.onclick=function(){openForm(a)};ac.appendChild(e);
-  var d=el("button","del","Удалить");d.onclick=function(){if(confirm("Удалить «"+a.name+"»?"))col.doc(a.id).delete().then(function(){if(a.img&&assets)assets.delete(a.img).catch(function(){});toast("Удалено")},function(){toast("Нет прав на удаление")})};ac.appendChild(d)}
+  var d=el("button","del","Удалить");d.onclick=function(){if(confirm("Удалить «"+a.name+"»?")){items=items.filter(function(x){return x.id!==a.id});persistLocal();render();toast("Удалено локально — скачайте JSON для публикации")}};ac.appendChild(d)}
  if(ac.children.length)c.appendChild(ac);
  return c}
 
@@ -204,69 +204,74 @@ $("addIns").onclick=function(){insRow()};$("addFile").onclick=function(){fileRow
 
 function openForm(a){
  editId=a?a.id:null;$("dt").textContent=a?"Редактировать":"Новое приложение";
- newBlob=null;imgId=a&&a.img||null;oldImg=imgId;prevSet(imgId?"/_blob/"+imgId:"");
  $("f_name").value=a?a.name:"";$("f_cat").value=a?a.cat||"":cat;$("f_st").value=a?a.status||"stable":"stable";
- $("f_desc").value=a?a.desc||"":"";$("f_url").value=a?a.url||"":"";$("f_tags").value=a&&a.tags?a.tags.join(", "):"";
+ $("f_desc").value=a?a.desc||"":"";$("f_url").value=a?a.url||"":"";$("f_imgurl").value=a?a.image||"":"";$("f_tags").value=a&&a.tags?a.tags.join(", "):"";
  $("f_ins").textContent="";$("f_files").textContent="";
  var ins=a?installsOf(a):[];if(ins.length)ins.forEach(insRow);else insRow();
  if(a&&a.files)a.files.forEach(fileRow);
  dl.showModal();$("f_name").focus()}
 
+function persistLocal(){
+ try{
+  var out=items.map(function(a){var x=Object.assign({},a);delete x.id;return x});
+  localStorage.setItem(LOCAL_KEY,JSON.stringify(out));
+  return true;
+ }catch(e){toast("Не удалось сохранить локальную копию в браузере");return false}
+}
+
 function saveForm(){
  var name=$("f_name").value.trim();if(!name){toast("Укажите название");return}
- var url=$("f_url").value.trim();if(url&&!safeUrl(url)){toast("Сайт: нужна ссылка http(s)://");return}
+ var url=$("f_url").value.trim(),image=$("f_imgurl").value.trim();
+ if(url&&!safeUrl(url)){toast("Сайт: нужна ссылка http(s)://");return}
+ if(image&&!safeUrl(image)){toast("Картинка: нужна ссылка http(s)://");return}
  var installs=[],files=[],bad=false;
  Array.prototype.forEach.call($("f_ins").children,function(r){var d=r.children[0].value,c=r.children[1].value.trim();if(c)installs.push({distro:d,cmd:c})});
  Array.prototype.forEach.call($("f_files").children,function(r){var u=r.children[0].value.trim();if(!u)return;if(!safeUrl(u)){bad=true;return}
-  var f={url:u},n=r.children[1].value.trim(),s=r.children[2].value.trim();if(n)f.name=n;if(s)f.size=s;files.push(f)});
+  var f={url:u},n=r.children[1].value.trim(),sz=r.children[2].value.trim();if(n)f.name=n;if(sz)f.size=sz;files.push(f)});
  if(bad){toast("Ссылки на файлы должны начинаться с http(s)://");return}
- var data={name:name,cat:$("f_cat").value.trim(),status:$("f_st").value,desc:$("f_desc").value.trim(),url:url,installs:installs,files:files,install:"",
+ var data={name:name,cat:$("f_cat").value.trim(),status:$("f_st").value,desc:$("f_desc").value.trim(),url:url,image:image,installs:installs,files:files,install:"",
   tags:$("f_tags").value.split(",").map(function(x){return x.trim()}).filter(Boolean).slice(0,8)};
- var ref=editId?col.doc(editId):col.doc();if(!editId)data.added=Date.now();
- $("save").disabled=true;
- (async function(){
-  try{
-   if(newBlob){if(!assets){toast("Загрузка картинок недоступна");return}var up=await assets.upload(newBlob);imgId=up.id}
-   data.img=imgId||"";
-   await (editId?ref.update(data):ref.set(data));
-   if(oldImg&&oldImg!==imgId&&assets){try{await assets.delete(oldImg)}catch(e){}}
-   dl.close();toast("Сохранено")
-  }catch(e){toast(e&&e.code==="too_large"?"Картинка слишком большая":"Не удалось сохранить — нужны права редактора")}
-  finally{$("save").disabled=false}
- })()}
+ if(editId!==null){
+  var idx=items.findIndex(function(x){return x.id===editId});
+  if(idx<0){toast("Приложение не найдено");return}
+  items[idx]=Object.assign({},items[idx],data);
+ }else{
+  data.added=Date.now();data.id="local-"+data.added;items.push(data);
+ }
+ persistLocal();dl.close();render();toast("Сохранено в этом браузере — для всех посетителей скачайте JSON");
+}
 
-function prevSet(src){var p=$("prev");p.style.backgroundImage=src?"url('"+src+"')":"";p.textContent=src?"":"?"}
-$("pick").onclick=function(){$("f_img").click()};
-$("f_img").onchange=function(){var f=this.files&&this.files[0];this.value="";if(!f)return;
- var u=URL.createObjectURL(f),im=new Image();
- im.onload=function(){var s=Math.min(im.naturalWidth,im.naturalHeight);if(!s){URL.revokeObjectURL(u);toast("Не удалось прочитать картинку");return}
-  var S=Math.min(512,s),cv=document.createElement("canvas");cv.width=cv.height=S;
-  cv.getContext("2d").drawImage(im,(im.naturalWidth-s)/2,(im.naturalHeight-s)/2,s,s,0,0,S,S);URL.revokeObjectURL(u);
-  cv.toBlob(function(b){if(!b){toast("Не удалось обработать картинку");return}newBlob=b;prevSet(URL.createObjectURL(b))},"image/webp",.9)};
- im.onerror=function(){URL.revokeObjectURL(u);toast("Это не картинка")};im.src=u};
-$("noimg").onclick=function(){newBlob=null;imgId=null;prevSet("")};
 $("add").onclick=function(){openForm(null)};
 $("cancel").onclick=function(){dl.close()};$("save").onclick=saveForm;
 ["q","srt"].forEach(function(i){$(i).oninput=render});
-$("exp").onclick=async function(){
- try{var d=await claude.use("downloads");if(!d){toast("Скачивание недоступно");return}
-  var out=items.map(function(a){var o=Object.assign({},a);delete o.id;return o});
-  await d.save({filename:"linux-shelf.json",data:JSON.stringify(out,null,2)})}catch(e){toast("Сохранение отменено")}};
+$("exp").onclick=function(){
+ var out=items.map(function(a){var o=Object.assign({},a);delete o.id;return o});
+ var blob=new Blob([JSON.stringify(out,null,2)],{type:"application/json;charset=utf-8"});
+ var u=URL.createObjectURL(blob),a=el("a");a.href=u;a.download="linux-shelf.json";
+ document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},1000);
+ toast("JSON скачан. Замени им linux-shelf.json в GitHub, чтобы обновить публичный сайт")
+};
+
+
 
 async function boot(){
- var user=null,timer=setTimeout(function(){if(!db)$("note").textContent="Не удаётся получить данные. Откройте страницу через вход в claude.ai."},10000);
- try{user=await window.claude.use("user")}catch(e){}
- try{db=await window.claude.use("db")}catch(e){}
- try{assets=await window.claude.use("assets")}catch(e){}
- clearTimeout(timer);
- if(!db){$("grid").textContent="";$("grid").appendChild(el("div","empty","Библиотека доступна только после входа в claude.ai."));$("cnt").textContent="0 приложений";return}
- try{canEdit=!!(user&&(user.isOwner()||user.canEdit()))}catch(e){}
- $("add").hidden=!canEdit;$("exp").hidden=!canEdit;
- if(!assets){$("l_img").hidden=true;$("imgrow").hidden=true}
- $("note").textContent=canEdit?"Вы владелец: можно добавлять, менять и удалять карточки. Клик по команде копирует её.":"Режим просмотра.";
- col=db.collection("apps");
- col.onSnapshot(function(s){items=s.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});render()},
-  function(){$("note").textContent="Ошибка чтения данных. Обновите страницу."})}
+ try{
+  var response=await fetch("./linux-shelf.json",{cache:"no-store"});
+  if(!response.ok)throw new Error("HTTP "+response.status);
+  var data=await response.json();
+  if(!Array.isArray(data))throw new Error("Некорректный формат JSON");
+  items=data.map(function(a,i){var x=Object.assign({},a);x.id="app-"+i;return x});
+  try{
+   var local=localStorage.getItem(LOCAL_KEY);
+   if(local){var saved=JSON.parse(local);if(Array.isArray(saved))items=saved.map(function(a,i){var x=Object.assign({},a);x.id="local-"+i;return x})}
+  }catch(e){}
+  $("note").textContent="Публичная библиотека загружается из linux-shelf.json. Добавления и изменения сохраняются в этом браузере. Чтобы опубликовать их для всех, нажмите «Скачать JSON» и замените файл linux-shelf.json в GitHub.";
+  render();
+ }catch(e){
+  $("grid").textContent="";$("grid").appendChild(el("div","empty","Не удалось загрузить библиотеку. Проверьте доступность linux-shelf.json."));
+  $("cnt").textContent="0 приложений";$("note").textContent="Ошибка загрузки: "+(e&&e.message?e.message:"неизвестная ошибка");
+ }
+}
 render();boot();
 })();
 </script>

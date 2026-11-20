@@ -72,8 +72,6 @@ dialog h2{margin:0 0 12px;text-transform:uppercase}
 label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);margin:12px 0 4px}
 dialog .in{width:100%}textarea{resize:vertical;min-height:76px}
 .row{display:flex;gap:10px}.row>*{flex:1;min-width:0}
-.lr{display:flex;gap:6px;margin-bottom:6px}.lr .in{padding:8px 10px}.lr .x{flex:none;width:38px;padding:0}
-.foot{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.imgrow{display:flex;gap:14px;align-items:center}.prev{width:96px;height:96px;border-radius:12px;background:var(--chip) center/cover;display:grid;place-items:center;color:var(--mut);font-size:30px;font-weight:900;overflow:hidden;flex:none}
 #toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--acc);color:#fff;font-weight:700;padding:9px 18px;border-radius:8px;opacity:0;transition:.25s;pointer-events:none;z-index:50}
 #toast.on{opacity:1;transform:translate(-50%,0)}
 .note{font-size:13px;color:var(--mut);margin-top:24px}
@@ -84,8 +82,6 @@ dialog .in{width:100%}textarea{resize:vertical;min-height:76px}
 <nav><div class="wrap">
  <div class="logo">Linux <b>Shelf</b></div>
  <button class="btn" id="theme" title="Сменить тему">◐</button>
- <button class="btn pri" id="add">＋ Добавить</button>
- <button class="btn" id="exp">Скачать JSON</button>
 </div></nav>
 <div class="wrap">
  <div class="hero">
@@ -103,31 +99,13 @@ dialog .in{width:100%}textarea{resize:vertical;min-height:76px}
  <p class="note" id="note"></p>
 </div>
 
-<dialog id="dlg">
- <h2 id="dt">Новое приложение</h2>
- <label>Название *</label><input class="in" id="f_name" maxlength="60">
- <label>Ссылка на картинку</label><input class="in" id="f_imgurl" type="url" placeholder="https://…">
- <div class="row">
-  <div><label>Категория</label><input class="in" id="f_cat" list="cats" maxlength="30" placeholder="Редакторы, Игры…"><datalist id="cats"></datalist></div>
-  <div><label>Статус</label><select class="in" id="f_st"><option value="stable">Стабильное</option><option value="beta">Бета</option><option value="alpha">Альфа</option></select></div>
- </div>
- <label>Описание</label><textarea class="in" id="f_desc" maxlength="400"></textarea>
- <label>Сайт или GitHub</label><input class="in" id="f_url" type="url" placeholder="https://…">
- <label>Команды установки</label><div id="f_ins"></div>
- <button class="btn" id="addIns" type="button">＋ Команда</button>
- <label>Файлы пакетов (ссылки)</label><div id="f_files"></div>
- <button class="btn" id="addFile" type="button">＋ Файл</button>
- <p class="hint">AppImage, .deb, .rpm, .pkg.tar.zst, .tar.gz, .exe и др. Вставьте прямую ссылку (например, из GitHub Releases) — тип определится по имени файла.</p>
- <label>Теги через запятую</label><input class="in" id="f_tags" maxlength="80" placeholder="видео, tui, лёгкое">
- <div class="foot"><button class="btn" id="cancel" type="button">Отмена</button><button class="btn pri" id="save" type="button">Сохранить</button></div>
-</dialog>
+
 <div id="toast"></div>
 
 <script>
 (function(){
 var $=function(i){return document.getElementById(i)};
-var items=[],cat="",stf="",canEdit=true,editId=null,dl=$("dlg");
-var LOCAL_KEY="linux-shelf-local-v1";
+var items=[],cat="",stf="";
 var COV=[["#8b5cf6","#3b1a8f"],["#c084fc","#5b1f8f"],["#6366f1","#26237a"],["#d946ef","#6a1a7a"],["#a855f7","#4a1a8a"],["#7c3aed","#2e1065"],["#ec4899","#6b1a45"]];
 var ST={stable:"Стабильное",beta:"Бета",alpha:"Альфа"};
 var DISTROS=["Arch","Debian / Ubuntu","Fedora","openSUSE","Nix","Flatpak","Snap","Windows / Wine","Любой дистрибутив","Другое"];
@@ -164,7 +142,7 @@ function render(){
  list.sort(function(a,b){return so==="az"?a.name.localeCompare(b.name,"ru"):(b.added||0)-(a.added||0)});
  $("cnt").textContent=items.length+" "+plural(items.length);$("shown").textContent=list.length===items.length?"":"найдено: "+list.length;
  var g=$("grid");g.textContent="";
- if(!list.length){g.appendChild(el("div","empty",items.length?"Ничего не найдено":(canEdit?"Полка пуста. Нажмите «Добавить», чтобы создать первую карточку.":"Пока здесь пусто.")));return}
+ if(!list.length){g.appendChild(el("div","empty",items.length?"Ничего не найдено":"Пока здесь пусто."));return}
  list.forEach(function(a){g.appendChild(card(a))})}
 
 function card(a){
@@ -185,74 +163,9 @@ function card(a){
   a.files.forEach(function(f){var u=safeUrl(f.url);if(!u)return;var n=f.name||fname(u),l=el("a","file");l.href=u;l.target="_blank";l.rel="noopener noreferrer";
    l.appendChild(el("span","k",kind(n)));l.appendChild(el("span","n",n));if(f.size)l.appendChild(el("span","s",f.size));l.appendChild(el("span","dl","Скачать"));fl.appendChild(l)});b.appendChild(fl)}
  c.appendChild(b);
- var ac=el("div","acts"),u=safeUrl(a.url);
- if(u){var l=el("a",null,"Сайт ↗");l.href=u;l.target="_blank";l.rel="noopener noreferrer";ac.appendChild(l)}
- if(canEdit){var e=el("button",null,"Изменить");e.onclick=function(){openForm(a)};ac.appendChild(e);
-  var d=el("button","del","Удалить");d.onclick=function(){if(confirm("Удалить «"+a.name+"»?")){items=items.filter(function(x){return x.id!==a.id});persistLocal();render();toast("Удалено локально — скачайте JSON для публикации")}};ac.appendChild(d)}
- if(ac.children.length)c.appendChild(ac);
+ var u=safeUrl(a.url);
+ if(u){var ac=el("div","acts"),l=el("a",null,"Сайт ↗");l.href=u;l.target="_blank";l.rel="noopener noreferrer";ac.appendChild(l);c.appendChild(ac)}
  return c}
-
-/* form rows */
-function insRow(v){var r=el("div","lr"),s=el("select","in");DISTROS.forEach(function(d){var o=el("option",null,d);o.value=d;s.appendChild(o)});s.value=v&&v.distro||"Arch";s.style.flex="0 0 150px";
- var i=el("input","in");i.placeholder="sudo pacman -S app";i.maxLength=200;i.value=v&&v.cmd||"";i.style.flex="1";
- var x=el("button","btn x","✕");x.type="button";x.onclick=function(){r.remove()};r.appendChild(s);r.appendChild(i);r.appendChild(x);$("f_ins").appendChild(r)}
-function fileRow(v){var r=el("div","lr"),u=el("input","in");u.placeholder="https://github.com/…/app-x86_64.AppImage";u.type="url";u.style.flex="1";u.value=v&&v.url||"";
- var n=el("input","in");n.placeholder="имя (необяз.)";n.maxLength=80;n.style.flex="0 0 130px";n.value=v&&v.name||"";
- var s=el("input","in");s.placeholder="размер";s.maxLength=12;s.style.flex="0 0 80px";s.value=v&&v.size||"";
- var x=el("button","btn x","✕");x.type="button";x.onclick=function(){r.remove()};r.appendChild(u);r.appendChild(n);r.appendChild(s);r.appendChild(x);$("f_files").appendChild(r)}
-$("addIns").onclick=function(){insRow()};$("addFile").onclick=function(){fileRow()};
-
-function openForm(a){
- editId=a?a.id:null;$("dt").textContent=a?"Редактировать":"Новое приложение";
- $("f_name").value=a?a.name:"";$("f_cat").value=a?a.cat||"":cat;$("f_st").value=a?a.status||"stable":"stable";
- $("f_desc").value=a?a.desc||"":"";$("f_url").value=a?a.url||"":"";$("f_imgurl").value=a?a.image||"":"";$("f_tags").value=a&&a.tags?a.tags.join(", "):"";
- $("f_ins").textContent="";$("f_files").textContent="";
- var ins=a?installsOf(a):[];if(ins.length)ins.forEach(insRow);else insRow();
- if(a&&a.files)a.files.forEach(fileRow);
- dl.showModal();$("f_name").focus()}
-
-function persistLocal(){
- try{
-  var out=items.map(function(a){var x=Object.assign({},a);delete x.id;return x});
-  localStorage.setItem(LOCAL_KEY,JSON.stringify(out));
-  return true;
- }catch(e){toast("Не удалось сохранить локальную копию в браузере");return false}
-}
-
-function saveForm(){
- var name=$("f_name").value.trim();if(!name){toast("Укажите название");return}
- var url=$("f_url").value.trim(),image=$("f_imgurl").value.trim();
- if(url&&!safeUrl(url)){toast("Сайт: нужна ссылка http(s)://");return}
- if(image&&!safeUrl(image)){toast("Картинка: нужна ссылка http(s)://");return}
- var installs=[],files=[],bad=false;
- Array.prototype.forEach.call($("f_ins").children,function(r){var d=r.children[0].value,c=r.children[1].value.trim();if(c)installs.push({distro:d,cmd:c})});
- Array.prototype.forEach.call($("f_files").children,function(r){var u=r.children[0].value.trim();if(!u)return;if(!safeUrl(u)){bad=true;return}
-  var f={url:u},n=r.children[1].value.trim(),sz=r.children[2].value.trim();if(n)f.name=n;if(sz)f.size=sz;files.push(f)});
- if(bad){toast("Ссылки на файлы должны начинаться с http(s)://");return}
- var data={name:name,cat:$("f_cat").value.trim(),status:$("f_st").value,desc:$("f_desc").value.trim(),url:url,image:image,installs:installs,files:files,install:"",
-  tags:$("f_tags").value.split(",").map(function(x){return x.trim()}).filter(Boolean).slice(0,8)};
- if(editId!==null){
-  var idx=items.findIndex(function(x){return x.id===editId});
-  if(idx<0){toast("Приложение не найдено");return}
-  items[idx]=Object.assign({},items[idx],data);
- }else{
-  data.added=Date.now();data.id="local-"+data.added;items.push(data);
- }
- persistLocal();dl.close();render();toast("Сохранено в этом браузере — для всех посетителей скачайте JSON");
-}
-
-$("add").onclick=function(){openForm(null)};
-$("cancel").onclick=function(){dl.close()};$("save").onclick=saveForm;
-["q","srt"].forEach(function(i){$(i).oninput=render});
-$("exp").onclick=function(){
- var out=items.map(function(a){var o=Object.assign({},a);delete o.id;return o});
- var blob=new Blob([JSON.stringify(out,null,2)],{type:"application/json;charset=utf-8"});
- var u=URL.createObjectURL(blob),a=el("a");a.href=u;a.download="linux-shelf.json";
- document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},1000);
- toast("JSON скачан. Замени им linux-shelf.json в GitHub, чтобы обновить публичный сайт")
-};
-
-
 
 async function boot(){
  try{
@@ -261,17 +174,14 @@ async function boot(){
   var data=await response.json();
   if(!Array.isArray(data))throw new Error("Некорректный формат JSON");
   items=data.map(function(a,i){var x=Object.assign({},a);x.id="app-"+i;return x});
-  try{
-   var local=localStorage.getItem(LOCAL_KEY);
-   if(local){var saved=JSON.parse(local);if(Array.isArray(saved))items=saved.map(function(a,i){var x=Object.assign({},a);x.id="local-"+i;return x})}
-  }catch(e){}
-  $("note").textContent="Публичная библиотека загружается из linux-shelf.json. Добавления и изменения сохраняются в этом браузере. Чтобы опубликовать их для всех, нажмите «Скачать JSON» и замените файл linux-shelf.json в GitHub.";
+  $("note").textContent="Публичная библиотека приложений для Linux. Список и карточки доступны всем посетителям только для просмотра.";
   render();
  }catch(e){
   $("grid").textContent="";$("grid").appendChild(el("div","empty","Не удалось загрузить библиотеку. Проверьте доступность linux-shelf.json."));
   $("cnt").textContent="0 приложений";$("note").textContent="Ошибка загрузки: "+(e&&e.message?e.message:"неизвестная ошибка");
  }
 }
+
 render();boot();
 })();
 </script>
